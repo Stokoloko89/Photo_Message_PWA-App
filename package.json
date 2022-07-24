@@ -1,0 +1,24 @@
+{
+  "name": "photo_msg",
+  "version": "1.0.0",
+  "description": "Simple photo-caption PWA",
+  "main": "server/",
+  "scripts": {
+    "start": "node server/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "photo",
+    "capture",
+    "pwa"
+  ],
+  "author": "Lunga Qaba <lungaqaba@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "express": "^4.18.1",
+    "jquery": "^3.6.0",
+    "socket.io": "^4.5.1",
+    "toastr": "^2.1.4"
+  }
+}
