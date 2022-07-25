@@ -131,9 +131,15 @@
       if ("mediaDevices" in navigator) {
         // Init App
         _init();
+
+        // Register SW if supported
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+          })
+        }
       } else {
         // Show notification for error
-
         toastr.error(
           null,
           "Your browser does not support the features required for this app.",

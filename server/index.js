@@ -43,4 +43,4 @@ app.use(express.static(`${__dirname}/../app`));
 app.use('/modules', express.static(`${__dirname}/../node_modules`));
 
 // Start Server
-server.listen(8000, () => console.log('Photo Message running on localhost:8000'));
+server.listen(3333, () => console.log('Photo Message running on localhost:3333'));
