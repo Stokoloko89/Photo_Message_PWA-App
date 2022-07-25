@@ -12,6 +12,21 @@ generateSW({
     ],
     skipWaiting: true,
     clientsClaim: true,
+
+    runtimeCaching: [
+        {
+            urlPattern: /\.(css|js)/,
+            handler: 'CacheFirst'
+        },
+        {
+            urlPattern: /^https:\/\/kit\.fontawesome\.com.*/,
+            handler: 'StaleWhileRevalidate',
+            options: {
+                cacheName: 'fontawesome',
+            }
+        }
+    ]
+
 }).then(({ count, size }) => {
     console.log(`Generated new service workers with ${count} precached files, totaling ${size} bytes.`)
 }).catch(console.error)
